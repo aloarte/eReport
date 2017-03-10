@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'MyAndroidKey'
+            keyPassword '1234QWE'
+            storeFile file('/home/users/keystores/android.jks')
+            storePassword '1234QWE'
+        }
+    }
+
+
+    compileSdkVersion 25
+    buildToolsVersion '25.0.1'
+    defaultConfig {
+        applicationId "com.p4r4d0x.eReport"
+        minSdkVersion 20
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+
+
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.android.support:design:25.2.0'
+
+
+
+//    compile 'com.google.android.gms:play-services:10.2.0'
+
+    compile 'com.google.android.gms:play-services-location:10.2.0'
+    compile 'com.google.android.gms:play-services-maps:10.2.0'
+
+   /* compile files('/home/p4r4d0x/AndroidStudioProjects/Emergapp/libs/activation.jar')
+    compile files('/home/p4r4d0x/AndroidStudioProjects/Emergapp/libs/additionnal.jar')
+    compile files('/home/p4r4d0x/AndroidStudioProjects/Emergapp/libs/mail.jar')
+    compile files('libs/activation.jar')*/
+}
+

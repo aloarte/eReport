@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:screenOrientation="portrait"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView3"
+        android:layout_weight="2.23">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:stretchColumns="1,2"
+            android:layout_marginTop="10dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/trTitle">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:text="Rank"
+                    android:id="@+id/tvTitleRank"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Name"
+                    android:id="@+id/tvTitleName"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textIsSelectable="false"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Level"
+                    android:id="@+id/tvTitleLevel"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Points"
+                    android:id="@+id/tvTitlePoints"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:gravity="center"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/trFirst">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:text="1º"
+                    android:id="@+id/tvFirstRank"
+                    android:padding="10dp"
+                    android:textSize="16dp"
+                    android:gravity="center" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/llFirstName">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="-"
+                        android:id="@+id/tvFirstName"
+                        android:textSize="14dp"
+                        android:textIsSelectable="false"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text="-"
+                        android:id="@+id/tvFirstTitle"
+                        android:textSize="14dp"
+                        android:textStyle="italic"
+                        android:textIsSelectable="false"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:text="-"
+                    android:id="@+id/tvFirstLevel"
+                    android:padding="10dp"
+                    android:textSize="14dp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:text="-"
+                    android:id="@+id/tvFirstPoints"
+                    android:padding="10dp"
+                    android:textSize="14dp"
+                    android:gravity="center" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/trSecond" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:text="2º"
+                    android:id="@+id/tvSecondRank"
+                    android:padding="10dp"
+                    android:textSize="16dp"
+                    android:gravity="center" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/llSecondName">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="-"
+                        android:id="@+id/tvSecondName"
+                        android:textSize="14dp"
+                        android:textIsSelectable="false"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text="-"
+                        android:id="@+id/tvSecondTitle"
+                        android:textSize="14dp"
+                        android:textStyle="italic"
+                        android:textIsSelectable="false"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:text="-"
+                    android:id="@+id/tvSecondLevel"
+                    android:padding="10dp"
+                    android:textSize="14dp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:text="-"
+                    android:id="@+id/tvSecondPoints"
+                    android:padding="10dp"
+                    android:textSize="14dp"
+                    android:gravity="center" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/trThird" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:text="3º"
+                    android:id="@+id/tvThirdRank"
+                    android:padding="10dp"
+                    android:textSize="16dp"
+                    android:gravity="center" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/llThirdName">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="-"
+                        android:id="@+id/tvThirdName"
+                        android:textSize="14dp"
+                        android:textIsSelectable="false"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text="-"
+                        android:id="@+id/tvThirdTitle"
+                        android:textSize="14dp"
+                        android:textStyle="italic"
+                        android:textIsSelectable="false"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:text="-"
+                    android:id="@+id/tvThirdLevel"
+                    android:padding="10dp"
+                    android:textSize="14dp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:text="-"
+                    android:id="@+id/tvThirdPoints"
+                    android:padding="10dp"
+                    android:textSize="14dp"
+                    android:gravity="center" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/trFourth" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:text="4º"
+                    android:id="@+id/tvFourthRank"
+                    android:padding="10dp"
+                    android:textSize="16dp"
+                    android:gravity="center" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/llFourthName">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="-"
+                        android:id="@+id/tvFourthName"
+                        android:textSize="14dp"
+                        android:textIsSelectable="false"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text="-"
+                        android:id="@+id/tvFourthTitle"
+                        android:textSize="14dp"
+                        android:textStyle="italic"
+                        android:textIsSelectable="false"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:text="-"
+                    android:id="@+id/tvFourthLevel"
+                    android:padding="10dp"
+                    android:textSize="14dp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:text="-"
+                    android:id="@+id/tvFourthPoints"
+                    android:padding="10dp"
+                    android:textSize="14dp"
+                    android:gravity="center" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/trFifth" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:text="5º"
+                    android:id="@+id/tvFifthRank"
+                    android:padding="10dp"
+                    android:textSize="16dp"
+                    android:gravity="center" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/llFifthName">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="-"
+                        android:id="@+id/tvFifthName"
+                        android:textSize="14dp"
+                        android:textIsSelectable="false"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text="-"
+                        android:id="@+id/tvFifthTitle"
+                        android:textSize="14dp"
+                        android:textStyle="italic"
+                        android:textIsSelectable="false"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:text="-"
+                    android:id="@+id/tvFifthLevel"
+                    android:padding="10dp"
+                    android:textSize="14dp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:text="-"
+                    android:id="@+id/tvFifthPoints"
+                    android:padding="10dp"
+                    android:textSize="14dp"
+                    android:gravity="center" />
+            </TableRow>
+
+
+        </TableLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:screenOrientation="portrait"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.uc3m.p4r4d0x.emergapp.AccountConfigurationActivity"
+    tools:showIn="@layout/activity_account_configuration"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.25"
+        android:weightSum="1"
+        android:gravity="center"
+        android:id="@+id/llProfileAvatarImage">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="166dp"
+            android:id="@+id/llAvatarImages"
+            android:weightSum="1"
+            android:layout_weight="0.70">
+
+            <HorizontalScrollView
+                android:layout_width="156dp"
+                android:layout_height="match_parent"
+                android:id="@+id/horizontalScrollView3"
+                android:fadeScrollbars="false">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/llAvatarsImagesScrollView">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:id="@+id/llAvatar1">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:id="@+id/ivACAvatarImage1"
+                            android:src="@mipmap/avatar_hombre2"
+                            android:padding="5dp"
+                            android:onClick="onClickSelectAvatar" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:id="@+id/llAvatar2" >
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:id="@+id/ivACAvatarImage2"
+                            android:src="@mipmap/avatar_mujer2"
+                            android:padding="5dp"
+                            android:onClick="onClickSelectAvatar" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:id="@+id/llAvatar3" >
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:id="@+id/ivACAvatarImage3"
+                            android:src="@mipmap/avatar_hombre1"
+                            android:padding="5dp"
+                            android:onClick="onClickSelectAvatar" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:id="@+id/llAvatar4" >
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:id="@+id/ivACAvatarImage4"
+                            android:src="@mipmap/avatar_mujer1"
+                            android:padding="5dp"
+                            android:onClick="onClickSelectAvatar" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:id="@+id/llAvatar5" >
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:id="@+id/ivACAvatarImage5"
+                            android:src="@mipmap/avatar_hipster1"
+                            android:padding="5dp"
+                            android:onClick="onClickSelectAvatar" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:id="@+id/llAvatar6" >
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:id="@+id/ivACAvatarImage6"
+                            android:src="@mipmap/avatar_hipster2"
+                            android:padding="5dp"
+                            android:onClick="onClickSelectAvatar" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="Change Avatar"
+            android:id="@+id/bACSelectAvatar"
+            android:onClick="onClickSaveAvatar"
+            style="?android:attr/buttonStyleSmall" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/llProfileColorSelector"
+        android:layout_marginTop="20dp">
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerAccountConfiguration"
+            style="@style/Base.TextAppearance.AppCompat.Widget.TextView.SpinnerItem" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="Change color"
+            android:id="@+id/bACSelectColor"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onClickChangeColor" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:layout_weight="0.47">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:id="@+id/imageView3"
+            android:src="@mipmap/letraslogo" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:screenOrientation="portrait"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView" >
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:padding="20dp"
+                android:id="@+id/llQuestAchievement1"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Quest 1: Report on Locality"
+                    android:id="@+id/tvQuestNameQ1"
+                    android:textIsSelectable="false"
+                    android:textStyle="bold"
+                    android:layout_gravity="left" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/linearLayout2"
+                    android:layout_weight="0.86">
+
+                    <TextView
+                        android:layout_width="152dp"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:text="Send a report from the locality established"
+                        android:id="@+id/tvQuestDescQ1"
+                        android:padding="10dp"
+                        android:textIsSelectable="false"
+                        android:textStyle="normal"
+                        android:textSize="13dp" />
+
+                    <TextView
+                        android:layout_width="124dp"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:id="@+id/tvQuestContentQ1"
+                        android:textIsSelectable="false"
+                        android:textStyle="normal|bold"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:layout_width="124dp"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:id="@+id/tvQuest1City"
+                        android:textIsSelectable="false"
+                        android:textStyle="normal|bold"
+                        android:textSize="20dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="124dp"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:id="@+id/tvQuest1Street"
+                        android:textIsSelectable="false"
+                        android:textStyle="normal|bold"
+                        android:textSize="20dp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/llQuestRewardsQ1"
+                        android:gravity="center" >
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:id="@+id/tvQuestAPQ1"
+                                android:textSize="11dp"
+                                android:gravity="center" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:id="@+id/tvQuestSAPQ1"
+                                android:textSize="11dp"
+                                android:gravity="center"
+                                android:text="AP" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:id="@+id/tvQuestXPQ1"
+                                android:textSize="11dp"
+                                android:textStyle="normal"
+                                android:gravity="center" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:id="@+id/tvQuestSXPQ1"
+                                android:textSize="11dp"
+                                android:gravity="center"
+                                android:text="XP" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:weightSum="1">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:text="Start Quest"
+                        android:id="@+id/bQuest1"
+                        android:layout_weight="0.44"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:onClick="onClickStartQuest1" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:padding="20dp"
+                android:id="@+id/llQuestAchievement2"
+                android:weightSum="1" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Quest 2: Report on event"
+                    android:id="@+id/tvQuestNameQ2"
+                    android:textIsSelectable="false"
+                    android:textStyle="bold"
+                    android:layout_gravity="left" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/linearLayout4"
+                    android:layout_weight="0.86" >
+
+                    <TextView
+                        android:layout_width="135dp"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:gravity="center"
+                        android:text="Send a report with the suggested task from the ubication"
+                        android:id="@+id/textView8"
+                        android:padding="10dp"
+                        android:textIsSelectable="false"
+                        android:textStyle="normal"
+                        android:textSize="13dp" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="154dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/llQuestContentQ2"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:layout_width="137dp"
+                            android:layout_height="55dp"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:gravity="center"
+                            android:id="@+id/tvQuestContentDescriptionQ2"
+                            android:textIsSelectable="false"
+                            android:textStyle="normal|bold"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="137dp"
+                            android:layout_height="55dp"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:gravity="center"
+                            android:id="@+id/tvQuestContentUbicationQ2"
+                            android:textIsSelectable="false"
+                            android:textStyle="normal|bold"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:layout_width="124dp"
+                            android:layout_height="match_parent"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:gravity="center"
+                            android:id="@+id/tvQuest2City"
+                            android:textIsSelectable="false"
+                            android:textStyle="normal|bold"
+                            android:textSize="20dp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:layout_width="124dp"
+                            android:layout_height="match_parent"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:gravity="center"
+                            android:id="@+id/tvQuest2Street"
+                            android:textIsSelectable="false"
+                            android:textStyle="normal|bold"
+                            android:textSize="20dp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/llQuestRewardsQ2"
+                        android:gravity="center" >
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:id="@+id/tvQuestAPQ2"
+                                android:textSize="11dp"
+                                android:gravity="center" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:id="@+id/tvQuestSAPQ2"
+                                android:textSize="11dp"
+                                android:gravity="center"
+                                android:text="AP" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:id="@+id/tvQuestXPQ2"
+                                android:textSize="11dp"
+                                android:textStyle="normal"
+                                android:gravity="center" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:id="@+id/tvQuestSXPQ2"
+                                android:textSize="11dp"
+                                android:gravity="center"
+                                android:text="XP" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:weightSum="1" >
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:text="Start Quest"
+                        android:id="@+id/bQuest2"
+                        android:layout_weight="0.44"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:onClick="onClickStartQuest2"
+                        android:nestedScrollingEnabled="false" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

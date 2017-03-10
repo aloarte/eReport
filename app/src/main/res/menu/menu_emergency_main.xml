@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/action_profile"
+        android:title="@string/action_profile"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_acount_configuration"
+        android:title="@string/action_acount_configuration"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_ranking"
+        android:title="@string/action_ranking"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_achievements"
+        android:title="@string/action_achievements"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_rewards"
+        android:title="@string/action_rewards"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_quest"
+        android:title="@string/action_quests"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_close_session"
+        android:icon="@mipmap/logout"
+        android:title="@string/action_close_session"
+        app:showAsAction="withText" />
+
+</menu>

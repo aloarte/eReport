@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:screenOrientation="portrait"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+    tools:context="com.uc3m.p4r4d0x.emergapp.LoginActivity"
+    android:background="#f9fafa"
+    android:weightSum="1">
+
+    <LinearLayout
+        tools:context="com.uc3m.p4r4d0x.emergapp.LoginActivity"
+        tools:showIn="@layout/activity_login"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="313dp"
+        android:gravity="center_vertical"
+        android:layout_weight="0.15"
+        android:paddingLeft="80dp"
+        android:paddingRight="80dp">
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/etUser"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:hint="User"
+            style="@style/Base.V12.Widget.AppCompat.EditText"
+            android:inputType="text" />
+
+        <EditText
+            style="@style/Base.V12.Widget.AppCompat.EditText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/etPassword"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:hint="Password"
+            android:inputType="textVisiblePassword" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvRetry"
+            android:textSize="20dp"
+            android:layout_below="@+id/etUser"
+            android:layout_alignRight="@+id/bSSignIn"
+            android:layout_alignEnd="@+id/bSSignIn" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:id="@+id/bSSignIn"
+            android:onClick="onClickLogin"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@+id/bLSignIn"
+            android:layout_alignStart="@+id/bLSignIn"
+            android:layout_alignRight="@+id/etPassword"
+            android:layout_alignEnd="@+id/etPassword"
+            style="?android:attr/buttonStyleSmall" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/signin"
+            android:id="@+id/bLSignIn"
+            android:onClick="onClickSignIn"
+            android:layout_below="@+id/bSSignIn"
+            android:layout_toRightOf="@+id/textView"
+            android:layout_alignRight="@+id/etPassword"
+            android:layout_alignEnd="@+id/etPassword"
+            style="?android:attr/buttonStyleSmall" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:weightSum="1"
+        android:layout_weight="0.50"
+        android:paddingLeft="80dp"
+        android:paddingRight="80dp">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:id="@+id/imageView4"
+            android:src="@mipmap/letraslogo"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+
+</LinearLayout>

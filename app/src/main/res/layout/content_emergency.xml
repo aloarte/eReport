@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:focusable="false"
+    android:screenOrientation="portrait"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.uc3m.p4r4d0x.emergapp.EmergencyActivity"
+    android:weightSum="1"
+    >
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f9fafa"
+        android:weightSum="1"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:weightSum="1"
+            style="@android:style/ButtonBar"
+            android:background="#f9fafa"
+            android:baselineAligned="false"
+            android:id="@+id/llPhotos"
+            android:layout_weight="0.48"
+            android:layout_margin="5dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="top">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/ic_camera"
+                android:id="@+id/ivCapturePhoto"
+                android:onClick="onClickTakePhoto"
+                android:adjustViewBounds="true"
+                android:longClickable="false"
+                android:nestedScrollingEnabled="false"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:contentDescription="Designed by Freepik and distributed by Flaticon" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/ivSelPictureGallery"
+                android:onClick="onClickGalleryImages"
+                android:src="@mipmap/ic_galleryimage"
+                android:adjustViewBounds="true"
+                android:focusableInTouchMode="false"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:contentDescription="Designed by Freepik and distributed by Flaticon" />
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:id="@+id/ivPicture1"
+                        android:longClickable="true"
+                        android:tag="5"
+                        android:src="@mipmap/grey_rect"
+                        android:adjustViewBounds="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:id="@+id/ivDeleteMainPicture1"
+                        android:longClickable="true"
+                        android:src="@mipmap/ic_delete"
+                        android:tag="1"
+                        android:adjustViewBounds="true"
+                        android:layout_gravity="center_horizontal"
+                        android:onClick="onClickDeletePicture"
+                        android:contentDescription="Designed by Freepik and distributed by Flaticon" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:id="@+id/ivPicture2"
+                        android:longClickable="true"
+                        android:tag="6"
+                        android:src="@mipmap/grey_rect"
+                        android:adjustViewBounds="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:id="@+id/ivDeleteMainPicture2"
+                        android:longClickable="true"
+                        android:src="@mipmap/ic_delete"
+                        android:tag="2"
+                        android:adjustViewBounds="false"
+                        android:layout_gravity="center_horizontal"
+                        android:onClick="onClickDeletePicture" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:id="@+id/ivPicture3"
+                        android:longClickable="true"
+                        android:tag="7"
+                        android:src="@mipmap/grey_rect"
+                        android:adjustViewBounds="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:id="@+id/ivDeleteMainPicture3"
+                        android:longClickable="true"
+                        android:src="@mipmap/ic_delete"
+                        android:tag="3"
+                        android:adjustViewBounds="false"
+                        android:layout_gravity="center_horizontal"
+                        android:onClick="onClickDeletePicture" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:id="@+id/ivPicture4"
+                        android:longClickable="true"
+                        android:tag="8"
+                        android:src="@mipmap/grey_rect"
+                        android:adjustViewBounds="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:id="@+id/ivDeleteMainPicture4"
+                        android:longClickable="true"
+                        android:src="@mipmap/ic_delete"
+                        android:tag="4"
+                        android:adjustViewBounds="true"
+                        android:layout_gravity="center_horizontal"
+                        android:onClick="onClickDeletePicture"
+                        android:nestedScrollingEnabled="false" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@android:style/ButtonBar"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:weightSum="1"
+            android:background="#f9fafa"
+            android:id="@+id/llVideos"
+            android:layout_weight="0.48"
+            android:gravity="center_vertical"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/ic_video"
+                android:id="@+id/ivCaptureVideo"
+                android:onClick="onClickTakeVideo"
+                android:layout_margin="10dp"
+                android:adjustViewBounds="false"
+                android:longClickable="false"
+                android:nestedScrollingEnabled="false"
+                android:clickable="false"
+                android:layout_gravity="center_vertical" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/ivSelVideoGallery"
+                android:onClick="onClickGalleryVideos"
+                android:src="@mipmap/ic_galleryvideo"
+                android:adjustViewBounds="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp" />
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <VideoView
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:id="@+id/ivVideo1"
+                            android:tag="1"
+                            android:longClickable="true"
+                            android:src="@mipmap/grey_rect"
+                            android:adjustViewBounds="true"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:clickable="false"
+                            android:contextClickable="false"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:id="@+id/ivDeleteMainVideo1"
+                            android:longClickable="true"
+                            android:src="@mipmap/ic_delete"
+                            android:tag="1"
+                            android:adjustViewBounds="true"
+                            android:layout_gravity="center_horizontal"
+                            android:onClick="onClickDeleteVideo" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <VideoView
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:id="@+id/ivVideo2"
+                            android:tag="2"
+                            android:longClickable="true"
+                            android:src="@mipmap/grey_rect"
+                            android:adjustViewBounds="true"
+                            android:focusableInTouchMode="false"
+                            android:focusable="false"
+                            android:contextClickable="false"
+                            android:clickable="false"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:id="@+id/ivDeleteMainVideo2"
+                            android:longClickable="true"
+                            android:src="@mipmap/ic_delete"
+                            android:tag="2"
+                            android:adjustViewBounds="true"
+                            android:layout_gravity="center_horizontal"
+                            android:onClick="onClickDeleteVideo" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <VideoView
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:id="@+id/ivVideo3"
+                            android:tag="3"
+                            android:longClickable="true"
+                            android:src="@mipmap/grey_rect"
+                            android:adjustViewBounds="true"
+                            android:clickable="false"
+                            android:contextClickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:id="@+id/ivDeleteMainVideo3"
+                            android:longClickable="true"
+                            android:src="@mipmap/ic_delete"
+                            android:tag="3"
+                            android:adjustViewBounds="true"
+                            android:layout_gravity="center_horizontal"
+                            android:onClick="onClickDeleteVideo"
+                            android:nestedScrollingEnabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <VideoView
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:id="@+id/ivVideo4"
+                            android:tag="4"
+                            android:longClickable="true"
+                            android:src="@mipmap/grey_rect"
+                            android:adjustViewBounds="true"
+                            android:contextClickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:clickable="false"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:id="@+id/ivDeleteMainVideo4"
+                            android:longClickable="true"
+                            android:src="@mipmap/ic_delete"
+                            android:tag="4"
+                            android:adjustViewBounds="true"
+                            android:layout_gravity="center_horizontal"
+                            android:onClick="onClickDeleteVideo" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#000000"
+            android:orientation="horizontal"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/SepLine1" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="95dp"
+            android:weightSum="1"
+            android:background="#f9fafa"
+            android:id="@+id/llPosition"
+            android:layout_gravity="left"
+            android:layout_marginBottom="5dp"
+            android:onClick="onClickChangeLocation"
+            android:measureWithLargestChild="true">
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/tvGPS"
+                android:text="Loading position..."
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_weight="0.63"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="15dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/tvGPSCoord"
+                android:text="40.4169416,-3.7083866"
+                android:visibility="invisible"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/tvGPSCity"
+                android:text=""
+                android:visibility="invisible"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/tvGPSStreet"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/ivChangePosition"
+                android:src="@mipmap/ic_map"
+                android:layout_gravity="center|right" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#000000"
+            android:orientation="horizontal"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/SepLine2" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="95dp"
+            android:weightSum="1"
+            android:background="#f9fafa"
+            android:id="@+id/llText"
+            android:layout_marginBottom="5dp"
+            android:onClick="onClickEditMessage">
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/tvInfoMessage"
+                android:text="Message info here"
+                android:gravity="center"
+                android:textSize="15dp"
+                android:textIsSelectable="false"
+                android:layout_weight="0.63"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="15dp" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/ivChangeMessage"
+                android:src="@mipmap/ic_editmessage"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#000000"
+            android:orientation="horizontal"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/SepLine3"
+            android:layout_gravity="top" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="107dp"
+            android:weightSum="1"
+            android:layout_gravity="center"
+            android:background="#f9fafa"
+            android:visibility="visible"
+            android:baselineAligned="true"
+            android:id="@+id/llSend"
+            android:nestedScrollingEnabled="false"
+            android:onClick="onClickSendInfo">
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/sendMessage"
+                android:id="@+id/tvSendMessage"
+                android:gravity="center|center_horizontal"
+                android:layout_weight="0.63"
+                android:layout_gravity="bottom"
+                android:textSize="15dp"
+                android:textIsSelectable="false"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="15dp" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/ic_sendmessage"
+                android:id="@+id/ivSendMessage"
+                android:adjustViewBounds="false"
+                android:longClickable="false"
+                android:nestedScrollingEnabled="false"
+                android:layout_gravity="center|right" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mapLL"
+        android:visibility="invisible">
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:id="@+id/google_MAPVIEW"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:id="@+id/ivBack"
+            android:src="@mipmap/ic_mapsback"
+            android:onClick="onClickCloseMap"
+            android:background="#D0dedede"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="62dp"
+            android:padding="8dp" />
+
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:id="@+id/ivCentreToMarker"
+            android:src="@mipmap/ic_mapsmarker"
+            android:onClick="onClickCenterAtMarker"
+            android:layout_alignTop="@+id/ivLoading"
+            android:layout_alignLeft="@+id/ivLoading"
+            android:layout_alignStart="@+id/ivLoading"
+            android:layout_gravity="center_vertical|right"
+            android:nestedScrollingEnabled="false"
+            android:background="#D0dedede"
+            android:layout_marginBottom="190dp"
+            android:layout_marginRight="12dp"
+            android:padding="8dp"
+            android:adjustViewBounds="false" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/afterSendingLL"
+        android:visibility="invisible"
+        android:background="#f9fafa"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:visibility="invisible"
+            android:id="@+id/reloadScreenRL"
+            android:background="#f9fafa" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ivSendToInit"
+                android:src="@mipmap/ic_launcher"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="visible"
+                android:onClick="onClickReloadInitialScreen" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/ReloadScreen"
+                android:id="@+id/tvReloadToInit"
+                android:singleLine="false"
+                android:visibility="visible"
+                android:layout_above="@+id/ivSendToInit"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="107dp"
+            android:visibility="visible"
+            android:id="@+id/sendMessageRL"
+            android:background="#f9fafa"
+            android:layout_weight="0.63">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/wait_for_sending"
+                android:id="@+id/tvSMInfo"
+                android:singleLine="false"
+                android:visibility="visible"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ivLoading"
+                android:src="@mipmap/loading"
+                android:layout_below="@+id/tvSMInfo"
+                android:layout_alignLeft="@+id/tvSMInfo"
+                android:layout_alignStart="@+id/tvSMInfo"
+                android:layout_alignRight="@+id/tvSMInfo"
+                android:layout_alignEnd="@+id/tvSMInfo"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:id="@+id/imageView6"
+                android:src="@mipmap/letraslogo"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>
+
