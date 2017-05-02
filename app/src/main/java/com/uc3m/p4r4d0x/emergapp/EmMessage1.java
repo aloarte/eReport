@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.uc3m.p4r4d0x.emergapp.servicios.GPSService;
 
-public class EmMessage1 extends AppCompatActivity {
+public class EmMessage1 extends NavigationActivityInner {
 
     //Define constants to send info
     final int C_YES=1,C_NO=2;
@@ -19,11 +19,9 @@ public class EmMessage1 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState, R.layout.activity_em_message1);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        setContentView(R.layout.activity_em_message1);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        getSupportActionBar().hide();
+
 
         //Get the GPS position and the message info from the previous activity
         Bundle extras = getIntent().getExtras();

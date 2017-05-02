@@ -35,7 +35,7 @@ import com.uc3m.p4r4d0x.emergapp.helpers.database.DBTitlesManager;
 import com.uc3m.p4r4d0x.emergapp.helpers.database.DBUserManager;
 
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends NavigationActivityOuter {
 
     Button bLogin,bNewAc;
     EditText etPassword,etUser;
@@ -62,13 +62,7 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
-        setContentView(R.layout.activity_login);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarL);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        super.onCreate(savedInstanceState, R.layout.activity_login);
 
         checkPermissions();
 
@@ -103,34 +97,7 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    /*
-    * Desc: method overrided from AppCompatActivity
-    *       this method is called when activity starts
-    *       Prepare the toolbar menu
-    * */
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_login, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
 
-    /*
-    * Desc: method overrided from AppCompatActivity
-    *       this method is called when activity starts
-    *       Prepare the elements on the toolbar menu
-    * */
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        switch (item.getItemId()) {
-            case R.id.changeEmail:
-                onClickShowChangeEmail();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
 
     /*OnRequestPermissions
     * Desc: check the status of the permissions
@@ -153,42 +120,6 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    /*
-  * Desc: on click function to change email
-  * */
-    public void onClickShowChangeEmail(){
-        //Get the alert dialog based on the resource email_change_input
-        AlertDialog.Builder alertBuilder = new AlertDialog.Builder(LoginActivity.this);
-        View layView = (LayoutInflater.from(LoginActivity.this)).inflate(R.layout.email_change_input, null);
-        alertBuilder.setView(layView);
-
-        //Get the field
-        final EditText userInput = (EditText) layView.findViewById(R.id.tvContentMessage);
-
-        //Build the buttons on the alertbuilder
-        alertBuilder.setCancelable(true)
-            .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
-                    //Set the email into the shared preferences
-                    sharedpreferences.edit().putString("email_to_report", userInput.getText().toString()).commit();
-                    Toast.makeText(getApplicationContext(), "Email to retrieve reports changed!", Toast.LENGTH_SHORT).show();
-
-                }
-            })
-            .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-
-                }
-            })
-        ;
-
-        Dialog dialog = alertBuilder.create();
-        dialog.show();
-
-    }
 
     public void insertInitialValues(){
         sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);

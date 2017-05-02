@@ -116,6 +116,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.uc3m.p4r4d0x.emergapp.HomeScreenActivity" />
         </activity>
+        <activity
+            android:name=".NavigationActivityInner"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".NavigationAchievementsActivity"></activity>
     </application>
 
 </manifest>

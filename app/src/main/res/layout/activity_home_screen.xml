@@ -1,260 +1,270 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.uc3m.p4r4d0x.emergapp.HomeScreenActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="com.uc3m.p4r4d0x.emergapp.HomeScreenActivity">
+    android:orientation="vertical" >
 
-    <android.support.design.widget.AppBarLayout
+
+    <include layout="@layout/app_bar_inner"/>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:screenOrientation="portrait"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:weightSum="1"
+        >
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbarH"
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:weightSum="1"
+            android:background="#f9fafa"
+            android:id="@+id/llAssitedReport"
+            android:layout_gravity="left"
+            android:layout_marginBottom="5dp"
+            android:onClick="onClickAssistedReport"
+            android:gravity="center_horizontal">
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Assisted Report"
+                android:id="@+id/button"
+                android:textStyle="bold"
+                android:onClick="onClickAssistedReport"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:weightSum="1"
+            android:background="#f9fafa"
+            android:id="@+id/llFastReport"
+            android:layout_marginBottom="5dp"
+            style="@style/Base.Theme.AppCompat.Light.Dialog"
+            android:gravity="center_horizontal">
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Fast Report"
+                android:id="@+id/bTextFastReport"
+                android:textStyle="bold"
+                android:onClick="onClickFastReport"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="40dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#000000"
+            android:orientation="horizontal"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/llSepLine"
+            android:layout_gravity="top"
+            android:gravity="center_horizontal" />
+
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="#009688"
-            app:layout_scrollFlags="scroll|enterAlways"
-            app:popupTheme="@style/AppTheme.PopupOverlay"
-            android:visibility="visible">
+            android:layout_height="220dp"
+            android:id="@+id/llNavegator"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="40dp"
+            android:paddingTop="40dp"
+            android:paddingRight="40dp"
+            android:gravity="center_horizontal">
+
             <LinearLayout
                 android:orientation="horizontal"
-                android:layout_width="match_parent"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:weightSum="1" >
+                android:weightSum="1"
+                android:layout_gravity="center"
+                android:background="#e9e9e9"
+                android:visibility="visible"
+                android:baselineAligned="true"
+                android:id="@+id/llNavRanking"
+                android:layout_margin="5dp"
+                android:onClick="onClickNavRanking">
 
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="35dp"
-                    android:layout_height="45dp"
-                    android:weightSum="1"
-                    android:visibility="visible"
-                    android:gravity="center"
-                    android:onClick="onClickPerformLogout">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/ic_ranking"
+                    android:id="@+id/ivNavRanking"
+                    android:adjustViewBounds="false"
+                    android:longClickable="false"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_gravity="center|right" />
 
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:id="@+id/imageView"
-                        android:src="@mipmap/logout"
-                        android:visibility="visible"
-                        android:onClick="onClickPerformLogout" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:weightSum="1"
-                    android:gravity="center"
-                    android:id="@+id/llImageProfile">
-
-                    <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:id="@+id/ivLogoToolbar"
-                        android:src="@mipmap/ic_launcher" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:weightSum="1"
-                    android:gravity="center"
-                    android:visibility="gone"
-                    android:id="@+id/llQuestActive" >
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:id="@+id/ivCurrentQuest"
-                        android:src="@mipmap/ic_quest"
-                        android:visibility="visible" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:weightSum="1"
-                    android:layout_marginRight="5dp"
-                    android:gravity="center"
-                    android:layout_marginLeft="5dp">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:id="@+id/ivQuestNotification"
-                        android:src="@mipmap/ic_quests_1" />
-
-                </LinearLayout>
-
-                <RelativeLayout
-                    android:orientation="horizontal"
-                    android:layout_width="120dp"
-                    android:layout_height="match_parent"
-                    android:weightSum="1"
-                    android:layout_gravity="left"
-                    android:gravity="center_horizontal">
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:weightSum="1"
-                        android:gravity="center_horizontal">
-
-                        <TextView
-                            android:id="@+id/tvToolbarUser"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Default User"
-                            android:textSize="12dp"
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            android:gravity="right"
-                            android:textIsSelectable="false"
-                            android:textStyle="bold"
-                            android:layout_alignParentLeft="true" />
-
-                        <TextView
-                            android:id="@+id/tvToolbarTitle"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Seeker of Truth"
-                            android:textSize="10dp"
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            android:textStyle="italic"
-                            android:gravity="center_horizontal"
-                            android:layout_gravity="center_horizontal" />
-
-                    </LinearLayout>
-
-                </RelativeLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:weightSum="1"
-                    android:layout_weight="0.36"
-                    android:gravity="center_horizontal">
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="110dp"
-                        android:layout_height="match_parent"
-                        android:weightSum="1">
-
-                        <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:weightSum="1" >
-
-                            <TextView
-                                android:gravity="left"
-                                android:id="@+id/tvToolbarLevel"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Default Level"
-                                android:textSize="12dp"
-                                android:paddingLeft="10dp"
-                                android:paddingRight="10dp"
-                                android:textStyle="bold" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:weightSum="1" >
-
-                            <TextView
-                                android:layout_gravity="left"
-                                android:gravity="left"
-                                android:id="@+id/tvToolbarExperiencePoints"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="XP"
-                                android:textSize="8dp"
-                                android:paddingLeft="10dp"
-                                android:paddingRight="10dp" />
-
-                            <TextView
-                                android:gravity="left"
-                                android:id="@+id/tvToolbarCurrentXP"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="0"
-                                android:textSize="8dp" />
-
-                            <TextView
-                                android:layout_gravity="left"
-                                android:gravity="left"
-                                android:id="@+id/tvToolBarSlash"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="/"
-                                android:textSize="8dp" />
-
-                            <TextView
-                                android:gravity="left"
-                                android:id="@+id/tvToolBarNextLevelXP"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="100"
-                                android:textSize="8dp" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:weightSum="1" >
-
-                            <TextView
-                                android:gravity="left"
-                                android:id="@+id/tvToolbarAchievementPoints"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="AP"
-                                android:textSize="8dp"
-                                android:layout_marginLeft="10dp" />
-
-                            <TextView
-                                android:gravity="left"
-                                android:id="@+id/tvToolbarCurrentAP"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="100"
-                                android:textSize="8dp"
-                                android:layout_marginLeft="10dp" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="fill_parent"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Ranking"
+                    android:id="@+id/tvNavRanking"
+                    android:gravity="center|center_horizontal"
+                    android:layout_weight="0.67"
+                    android:layout_gravity="bottom"
+                    android:textSize="12dp"
+                    android:textIsSelectable="false" />
 
             </LinearLayout>
 
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_gravity="center"
+                android:background="#e9e9e9"
+                android:visibility="visible"
+                android:baselineAligned="true"
+                android:id="@+id/llNavAchievements"
+                android:layout_margin="5dp"
+                android:onClick="onClickNavAchievements">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/ic_achievements"
+                    android:id="@+id/ivNavAchievements"
+                    android:adjustViewBounds="true"
+                    android:longClickable="true"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_gravity="center|right" />
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="fill_parent"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Achievements"
+                    android:id="@+id/tvNavAchievements"
+                    android:gravity="center|center_horizontal"
+                    android:layout_weight="0.67"
+                    android:layout_gravity="bottom"
+                    android:textSize="12dp"
+                    android:textIsSelectable="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_gravity="center"
+                android:background="#e9e9e9"
+                android:visibility="visible"
+                android:baselineAligned="true"
+                android:id="@+id/llNavAchievementProgress"
+                android:layout_margin="5dp"
+                android:onClick="onClickNavAchievementsProgress">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/ic_progress"
+                    android:id="@+id/ivNavAchievementProgress"
+                    android:adjustViewBounds="true"
+                    android:longClickable="true"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_gravity="center|right" />
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="fill_parent"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Rewards"
+                    android:id="@+id/tvNavAchievementProgress"
+                    android:gravity="center|center_horizontal"
+                    android:layout_weight="0.67"
+                    android:layout_gravity="bottom"
+                    android:textSize="12dp"
+                    android:textIsSelectable="false" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="23dp"
+            android:layout_weight="0.15"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView2"
+                android:src="@mipmap/letraslogo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="99dp"
+            android:layout_weight="0.21"
+            android:visibility="gone">
 
 
-        </android.support.v7.widget.Toolbar>
+            <TextView
+                android:layout_width="278dp"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/tvGPSEM1"
+                android:gravity="center"
+                android:layout_weight="0.41"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/tvGPSCoordEM1"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/tvGPSCityEM1"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/tvGPSStreetEM1"
+                android:visibility="gone" />
 
 
+        </LinearLayout>
 
-    </android.support.design.widget.AppBarLayout>
-    <include layout="@layout/content_home_screen" />
+    </LinearLayout>
 
-</android.support.design.widget.CoordinatorLayout>
+
+</LinearLayout>

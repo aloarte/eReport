@@ -1,124 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.uc3m.p4r4d0x.emergapp.EmergencyActivity"
+    android:orientation="vertical" >
 
-    android:weightSum="1"
-    android:background="#f9fafa">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="14dp" />
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.26"
-        android:gravity="center_horizontal">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ivLogo2"
-            android:src="@mipmap/ic_launcher" />
-    </LinearLayout>
+    <include layout="@layout/app_bar_inner"/>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="126dp"
-        android:padding="5dp"
-        android:layout_weight="0.22">
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+
+        android:weightSum="1"
+        android:background="#f9fafa">
+
 
         <LinearLayout
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_gravity="top">
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/SelfDamQuestion"
-                android:id="@+id/tvPopUp2Title"
-                android:layout_gravity="center_horizontal"
-                android:textIsSelectable="false"
-                android:textAlignment="center"
-                android:textStyle="bold"
-                android:textSize="18dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/SelfDamContent"
-                android:id="@+id/tvPopUp2Content"
-                android:textAlignment="center"
-                android:textSize="14dp"
-                android:paddingLeft="50dp"
-                android:paddingRight="50dp" />
-
-        </LinearLayout>
+            android:layout_height="14dp" />
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" >
+            android:layout_weight="0.26"
+            android:gravity="center_horizontal">
 
-            <Button
-                android:id="@+id/bPopUp2Yes"
-                android:layout_width="168dp"
+            <ImageView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Yes"
-                android:onClick="onClickYesPopUp2"
-                android:layout_below="@+id/bPopUp2No"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:id="@+id/ivLogo2"
+                android:src="@mipmap/ic_launcher" />
+        </LinearLayout>
 
-            <Button
-                android:id="@+id/bPopUp2No"
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="126dp"
+            android:padding="5dp"
+            android:layout_weight="0.22">
+
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="No"
-                android:onClick="onClickNoPopUp2" />
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="top">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/SelfDamQuestion"
+                    android:id="@+id/tvPopUp2Title"
+                    android:layout_gravity="center_horizontal"
+                    android:textIsSelectable="false"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/SelfDamContent"
+                    android:id="@+id/tvPopUp2Content"
+                    android:textAlignment="center"
+                    android:textSize="14dp"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" >
+
+                <Button
+                    android:id="@+id/bPopUp2Yes"
+                    android:layout_width="168dp"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:onClick="onClickYesPopUp2"
+                    android:layout_below="@+id/bPopUp2No"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <Button
+                    android:id="@+id/bPopUp2No"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:onClick="onClickNoPopUp2" />
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="99dp"
-        android:layout_weight="0.21">
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_weight="0.15" >
-
-        <ImageView
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/ivLetrasLogo2"
-            android:src="@mipmap/letraslogo" />
-    </LinearLayout>
+            android:layout_height="99dp"
+            android:layout_weight="0.21">
 
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="0.15" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ivLetrasLogo2"
+                android:src="@mipmap/letraslogo" />
+        </LinearLayout>
+
+    </LinearLayout>
 </LinearLayout>

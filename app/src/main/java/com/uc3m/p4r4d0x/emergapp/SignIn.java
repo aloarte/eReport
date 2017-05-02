@@ -21,16 +21,16 @@ import com.uc3m.p4r4d0x.emergapp.helpers.database.DBQuestsManager;
 import com.uc3m.p4r4d0x.emergapp.helpers.database.DBTitlesManager;
 import com.uc3m.p4r4d0x.emergapp.helpers.database.DBUserManager;
 
-public class SignIn extends AppCompatActivity {
+public class SignIn extends NavigationActivityOuter {
 
     Button bSignIn;
     EditText etUser,etPassword1,etPassword2,etMail,etDate;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState, R.layout.activity_sign_in);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        setContentView(R.layout.activity_sign_in);
 
         //Asociate all the elements from the layout
         bSignIn=(Button)findViewById(R.id.bSSignIn);
@@ -40,17 +40,9 @@ public class SignIn extends AppCompatActivity {
         etMail=(EditText) findViewById(R.id.etSIemail);
         etDate =(EditText) findViewById(R.id.etSIdate);
 
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarS);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
 
-    @Override
-    public void onBackPressed() {
-    }
+
 
 
     /*

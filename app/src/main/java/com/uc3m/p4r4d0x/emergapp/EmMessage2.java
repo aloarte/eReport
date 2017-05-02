@@ -8,7 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 
-public class EmMessage2 extends AppCompatActivity {
+public class EmMessage2 extends NavigationActivityInner {
     //Value from the previous pop up activity
     int valueFromPopup1=0;
 
@@ -19,12 +19,8 @@ public class EmMessage2 extends AppCompatActivity {
     String   sGPSAddr, sGPSCoord,sGPSCity,sGPSStreet;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState, R.layout.activity_em_message2);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
-        setContentView(R.layout.activity_em_message2);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        getSupportActionBar().hide();
 
         //Get the GPS position and the message info from the previous activity
         Bundle extras = getIntent().getExtras();
